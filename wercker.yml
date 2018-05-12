@@ -1,0 +1,18 @@
+box: 
+  id: tiryoh/ubuntu:dev-xenial
+  cmd: sudo bash --login
+build:
+  steps:
+    - script:
+        name: env check
+        code: |
+          lsb_release -a
+          uname -a
+          whoami
+          pwd
+          ls
+    - script:
+        name: test
+        code: |
+          sh -e ./step0.bash
+          sh -e ./step1.bash
