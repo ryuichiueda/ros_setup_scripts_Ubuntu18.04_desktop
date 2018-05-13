@@ -14,7 +14,7 @@ sudo apt-get install -y openssh-server
 # this procedure is not required
 pwd				|
 grep -F 'ros_setup_scripts'	||
-git clone https://github.com/ryuichiueda/ros_setup_scripts_Ubuntu17.04_desktop.git
+git clone https://github.com/ryuichiueda/ros_setup_scripts_Ubuntu18.04_desktop.git
 
 # If your git gives a SSL error, please try this.  ###
 #GIT_SSL_NO_VERIFY=1 git clone https://github.com/ryuichiueda/ros_setup_scripts_Ubuntu16.04_desktop.git
