@@ -14,8 +14,10 @@ sudo apt update || echo ""
 sudo apt install -y ros-${ROS_VER}-desktop-full
 
 ls /etc/ros/rosdep/sources.list.d/20-default.list && sudo rm /etc/ros/rosdep/sources.list.d/20-default.list
+sudo apt install python-pip
+sudo -H pip install rosdep
 sudo rosdep init 
-rosdep update
+sudo rosdep update
 
 sudo apt install -y python-rosinstall
 sudo apt install -y build-essential
@@ -30,6 +32,7 @@ echo "export ROS_MASTER_URI=http://localhost:11311" >> ~/.bashrc
 grep -F "ROS_HOSTNAME" ~/.bashrc ||
 echo "export ROS_HOSTNAME=localhost" >> ~/.bashrc
 
+sudo chown $USER:$USER $HOME/.ros/ -R 
 
 ### instruction for user ###
 set +xv
